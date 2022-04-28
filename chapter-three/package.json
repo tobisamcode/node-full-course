@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tobisamcode/node-full-course/issues"
   },
-  "homepage": "https://github.com/tobisamcode/node-full-course#readme"
+  "homepage": "https://github.com/tobisamcode/node-full-course#readme",
+  "dependencies": {
+    "date-fns": "^2.28.0"
+  }
 }
