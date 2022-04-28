@@ -1,22 +1,27 @@
 {
-  "name": "chapter-three",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tobisamcode/node-full-course.git"
-  },
-  "author": "tobisam",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tobisamcode/node-full-course/issues"
-  },
-  "homepage": "https://github.com/tobisamcode/node-full-course#readme",
-  "dependencies": {
-    "date-fns": "^2.28.0"
-  }
+    "name": "chapter-three",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index",
+        "dev": "nodemon index"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tobisamcode/node-full-course.git"
+    },
+    "author": "tobisam",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tobisamcode/node-full-course/issues"
+    },
+    "homepage": "https://github.com/tobisamcode/node-full-course#readme",
+    "dependencies": {
+        "date-fns": "^2.28.0",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
 }
