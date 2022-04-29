@@ -6,10 +6,10 @@ const fsPromises = require('fs').promises;
 
 const logEvents = require('./logEvents');
 const EventEmitter = require('events');
-class MyEmitter extends EventEmitter {};
+// class MyEmitter extends EventEmitter {};
 
-// initialize object
-const myEmitter = new MyEmitter();
+// // initialize object
+// const myEmitter = new MyEmitter();
 
 const PORT = process.env.PORT || 3500;
 
@@ -39,6 +39,8 @@ const server = http.createServer((req, res) => {
         case '.txt':
             contentType = 'text/plain';
             break;
+        default:
+            contentType = 'text/html';
     }
 
 
