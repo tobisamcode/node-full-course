@@ -60,8 +60,18 @@ const server = http.createServer((req, res) => {
     if (fileExists) {
         // serve the file
     } else {
-        // 404
-        console.log(path.parse(filePath));
+        switch (path.parse(filePath).base) {
+            case 'old-page.html':
+                res.writeHead(301, { 'Location': '/new-page.html' });
+                res.end();
+                break;
+            case 'new-page.html':
+                res.writeHead(301, { 'Location': '/' });
+                res.end();
+                break;
+            default:
+                // serve a 404 response
+        };
     }
 
 
