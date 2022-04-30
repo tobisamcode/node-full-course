@@ -8,7 +8,7 @@ const logEvents = require('./logEvents');
 const EventEmitter = require('events');
 // class MyEmitter extends EventEmitter {};
 
-// // initialize object
+// initialize object
 // const myEmitter = new MyEmitter();
 
 const PORT = process.env.PORT || 3500;
@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3500;
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method);
 
-    const extension = path.extension(req.url);
+    const extension = path.extname(req.url);
 
     let contentType;
 
@@ -41,6 +41,27 @@ const server = http.createServer((req, res) => {
             break;
         default:
             contentType = 'text/html';
+    }
+
+    let filePath =
+        contentType === 'text/html' && req.url === '/' ?
+        path.join(__dirname, 'views', 'idex.html') :
+        contentType === "text/html" && req.url.slice(-1) === '/' ?
+        path.join(__dirname, 'views', req.url, 'index.html') :
+        contentType === 'text/html' ?
+        path.join(__dirname, 'views', req.url) :
+        path.join(__dirname, req.url);
+
+    // makes the .html extension not required in te browser
+    if (!extension && req.url.slice(-1) !== '/') filePath += '.html';
+
+    const fileExists = fs.existsSync(filePath);
+
+    if (fileExists) {
+        // serve the file
+    } else {
+        // 404
+        console.log(path.parse(filePath));
     }
 
 
