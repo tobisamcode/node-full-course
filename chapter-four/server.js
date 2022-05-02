@@ -6,10 +6,6 @@ const fsPromises = require('fs').promises;
 
 const logEvents = require('./logEvents');
 const EventEmitter = require('events');
-// class MyEmitter extends EventEmitter {};
-
-// initialize object
-// const myEmitter = new MyEmitter();
 
 const PORT = process.env.PORT || 3500;
 
