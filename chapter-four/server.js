@@ -9,6 +9,18 @@ const EventEmitter = require('events');
 
 const PORT = process.env.PORT || 3500;
 
+const serveFile = async(filePath, contentType, response) => {
+    try {
+        const data = await fsPromises.readFile(filePath, 'utf8');
+        response.writeHead(200, { 'Content-Type': contentType });
+        response.end(data);
+    } catch (err) {
+        console.log(err);
+        response.statusCode = 500;
+        response.end();
+    }
+}
+
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method);
 
@@ -55,6 +67,7 @@ const server = http.createServer((req, res) => {
 
     if (fileExists) {
         // serve the file
+        serveFile(filePath, contentType, res);
     } else {
         switch (path.parse(filePath).base) {
             case 'old-page.html':
@@ -67,12 +80,10 @@ const server = http.createServer((req, res) => {
                 break;
             default:
                 // serve a 404 response
+                serveFile(path.join(__dirname, 'views', '404.html'), 'text/html', res);
         };
     }
-
-
     // let path;
-
     // switch (req.url) {
     //     case '/':
     //         res.statusCode = 200;
@@ -82,7 +93,6 @@ const server = http.createServer((req, res) => {
     //         });
     //         break
     // }
-
 });
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
