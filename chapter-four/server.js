@@ -63,7 +63,7 @@ const server = http.createServer((req, res) => {
 
     let filePath =
         contentType === 'text/html' && req.url === '/' ?
-        path.join(__dirname, 'views', 'idex.html') :
+        path.join(__dirname, 'views', 'index.html') :
         contentType === "text/html" && req.url.slice(-1) === '/' ?
         path.join(__dirname, 'views', req.url, 'index.html') :
         contentType === 'text/html' ?
