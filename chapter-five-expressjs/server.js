@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 
 
 // built-in middleware  to handle urlencoded data
-// in other words, form data:
+// in other words, form data
 // 'content-type: application/x-www-form-urlencoded'
 app.use(express.urlencoded({ extended: false }));
 
