@@ -177,3 +177,15 @@
 20220515	19:18:31	29c41d03-3e07-4ec9-af3a-0a63eceeb727	DELETE	undefined	/employees
 20220515	19:18:37	a4f5aa75-4b38-47b7-8916-54a3417e75cd	DELETE	undefined	/employees
 20220515	19:18:45	96f984f8-9c68-4165-94df-17d9fc3a0738	DELETE	undefined	/employees
+20220515	19:21:15	1d0fa68e-d7dd-4b2f-a673-5df8fc7bd322	GET	undefined	/employees/2
+20220515	19:21:19	49d66fb9-49de-4af9-84ec-742bf12a9ffd	GET	undefined	/employees/1
+20220515	19:21:29	584a16a5-5704-4b91-8dda-436836aa8860	GET	undefined	/employees/1
+20220515	19:21:36	8f466202-041a-477e-b8d1-951734886edc	GET	undefined	/employees/1
+20220515	19:21:54	ebbc615f-34c5-4650-a9b0-0d6a5559b036	GET	undefined	/employees/1
+20220515	19:22:38	686c516a-8b00-447e-b813-10ce22c54021	GET	undefined	/employees/1
+20220515	19:22:39	d9d771e8-0983-46cd-a0a0-bf722164265e	GET	undefined	/employees/1
+20220515	19:22:48	d6a895f0-b385-4c48-983e-5a50d7fa0306	GET	undefined	/employees/1
+20220515	19:23:09	0c046c4e-7b22-4322-bf36-5b157b2ca62c	GET	undefined	/employees/1
+20220515	19:24:22	1e78612e-5e82-4213-a637-9f3b8fab7469	GET	undefined	/employees/1
+20220515	19:24:25	76cdc0b9-496b-4435-8b5b-7dbbef9b11e0	GET	undefined	/employees/2
+20220515	19:24:27	1bc8a87d-988a-4017-920b-dd41cbffb5ad	GET	undefined	/employees/2
