@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: black;
+  color: aliceblue;
+  font-size: 50px;
+  max-width: 100%;
+}
+
+.error {
+  display: flex; 
+  height: 100vh; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 300px; 
+  font-weight: bold;
+}
+
+.test {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
