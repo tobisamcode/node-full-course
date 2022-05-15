@@ -6,3 +6,4 @@
 20220515	17:10:24	bc163bf3-03f2-45e6-9ade-4eebbede1acf	TypeError : Cannot read property 'firstname' of undefined
 20220515	17:10:59	19436c2f-b9cf-4682-9fe4-61c1a987e657	TypeError : Cannot read property 'firstname' of undefined
 20220515	17:11:20	8785981d-82cc-4f56-9076-476451af2904	TypeError : Cannot read property 'firstname' of undefined
+20220515	17:13:48	66c63186-339f-4581-98db-782dceb216fe	TypeError : res.join is not a function
