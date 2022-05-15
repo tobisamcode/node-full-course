@@ -73,3 +73,7 @@
 20220515	14:19:10	84f43393-368f-4c58-a96c-6127954893cf	GET	undefined	/favicon.ico
 20220515	14:19:15	90f13d46-95ff-4708-b7b1-43dafdade4b0	GET	undefined	/new-page.html
 20220515	14:19:15	da6dd56b-eb11-444d-bbf3-831a74a51e12	GET	undefined	/image/day.png
+20220515	14:24:03	5cd4e5f0-e5d0-474a-915d-3acebba49095	GET	undefined	/new-page.html
+20220515	14:24:03	6df6df5e-0b9e-447a-9080-4bbefaace39c	GET	undefined	/image/day.png
+20220515	14:24:07	72a98cbc-44a5-4a7c-ae35-beb87a8d131f	GET	undefined	/new-page.html
+20220515	14:24:07	0608d2ac-7388-4326-bdb9-59a0156a5e95	GET	undefined	/image/day.png
