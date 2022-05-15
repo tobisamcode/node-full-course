@@ -7,3 +7,7 @@
 20220515	17:10:59	19436c2f-b9cf-4682-9fe4-61c1a987e657	TypeError : Cannot read property 'firstname' of undefined
 20220515	17:11:20	8785981d-82cc-4f56-9076-476451af2904	TypeError : Cannot read property 'firstname' of undefined
 20220515	17:13:48	66c63186-339f-4581-98db-782dceb216fe	TypeError : res.join is not a function
+20220515	17:16:52	95bd22f9-9514-405d-8482-bc7024f444b3	SyntaxError : Unexpected token } in JSON at position 16
+20220515	19:17:58	19b07422-45cd-4b8e-8599-71456cd58c14	SyntaxError : Unexpected string in JSON at position 18
+20220515	19:18:05	8be7f3b5-6a88-40cf-9a06-71f8af37961b	SyntaxError : Unexpected token , in JSON at position 13
+20220515	19:18:25	dbee1732-9fae-4050-a18a-3b98302f0495	SyntaxError : Unexpected token } in JSON at position 17
