@@ -11,5 +11,14 @@ const handlerNewUser = async(req, res) => {
     if (!user || !password) return res.status(404).json({ "message": "username and password are required." })
         // check for duplicate username in the db
     const duplicate = usersDB.users.find(person => person.username === user);
-
+    if (duplicate) return res.sendStatus(409); // conflict
+    try {
+        // encrypt the password
+        const hashedPassword = await bcrypt.hash(password, 10);
+        // store the new user
+        const newUser = { "username": user, "password": hashedPassword };
+        userDB.setUsers([...userDB.users, newUser])
+    } catch (err) {
+        res.status(500).json({ "message": err.message })
+    }
 }
