@@ -189,3 +189,5 @@
 20220515	19:24:22	1e78612e-5e82-4213-a637-9f3b8fab7469	GET	undefined	/employees/1
 20220515	19:24:25	76cdc0b9-496b-4435-8b5b-7dbbef9b11e0	GET	undefined	/employees/2
 20220515	19:24:27	1bc8a87d-988a-4017-920b-dd41cbffb5ad	GET	undefined	/employees/2
+20220515	22:52:45	f0e5a539-c0b7-4458-b9fc-921003efd38f	GET	undefined	/
+20220515	22:52:49	f376525d-4369-4d16-8754-43618d567ac0	GET	undefined	/favicon.ico
