@@ -10,7 +10,7 @@ const handlerNewUser = async(req, res) => {
     const { user, password } = req.body;
     if (!user || !password) return res.status(404).json({ "message": "username and password are required." })
         // check for duplicate username in the db
-    const duplicate = usersDB.users.find(person => person.username === user);
+    const duplicate = userDB.users.find(person => person.username === user);
     if (duplicate) return res.sendStatus(409); // conflict
     try {
         // encrypt the password
@@ -19,9 +19,9 @@ const handlerNewUser = async(req, res) => {
         const newUser = { "username": user, "password": hashedPassword };
         userDB.setUsers([...userDB.users, newUser]);
         await fsPromises.writeFile(path.join(__dirname, '..', 'model', 'users.json'),
-            json.stringify(userDB.users)
+            JSON.stringify(userDB.users)
         );
-        console.log(usersDB.users);
+        console.log(userDB.users);
         res.status(201).json({ "success": `New user ${user} created` })
     } catch (err) {
         res.status(500).json({ "message": err.message })
