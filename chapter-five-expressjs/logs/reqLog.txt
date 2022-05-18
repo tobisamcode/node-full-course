@@ -221,3 +221,4 @@
 20220517	05:33:52	00c4e4b6-ea78-4a9c-8242-9a4a89f2a3fe	POST	undefined	/register
 20220517	05:37:19	fc661d3c-fe02-4ba6-b366-87a9df598797	POST	undefined	/register
 20220517	05:37:36	b54c10d6-705d-4cdd-aadf-85252959a365	POST	undefined	/register
+20220517	05:38:42	1e997bd9-3eec-4263-866a-3f6afb458de1	GET	undefined	/register
