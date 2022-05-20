@@ -28,4 +28,7 @@ const handlerNewUser = async(req, res) => {
     }
 }
 
+
+
+
 module.exports = { handlerNewUser };
