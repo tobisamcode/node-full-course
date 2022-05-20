@@ -1,5 +1,7 @@
 {
   "editor.fontSize": 15,
   "terminal.integrated.fontSize": 12,
-  "terminal.integrated.fontWeightBold": "bold"
+  "terminal.integrated.fontWeightBold": "bold",
+  "editor.accessibilityPageSize": 14,
+  "editor.accessibilitySupport": "on"
 }
