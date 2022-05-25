@@ -24,11 +24,9 @@ const handlerNewUser = async(req, res) => {
         console.log(userDB.users);
         res.status(201).json({ "success": `New user ${user} created` })
     } catch (err) {
-        res.status(500).json({ "message": err.message })
+        res.status(500).json({ "message": err.message });
     }
 }
-
-
 
 
 module.exports = { handlerNewUser };
