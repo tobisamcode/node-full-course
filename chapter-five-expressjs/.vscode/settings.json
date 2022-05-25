@@ -3,5 +3,7 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontWeightBold": "bold",
   "editor.accessibilityPageSize": 14,
-  "editor.accessibilitySupport": "on"
+  "editor.accessibilitySupport": "on",
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 60
 }
