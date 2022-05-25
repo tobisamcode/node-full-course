@@ -16,9 +16,11 @@ const handleLogin = async (req, res) => {
     // evaluate password
     const match = bcrypt.compare(password, foundUser.password);
     if (match) {
+        // creae  JWTs
         res.json({ 'success': `user ${user} is logged in`});
     } else {
         res.sendStatus(401); //nuauthorized
     }
-
 }
+
+module.exports = { handleLogin };
