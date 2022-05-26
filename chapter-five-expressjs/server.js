@@ -3,7 +3,8 @@ const path = require('path');
 const cors = require('cors');
 const corsOptions = require('./config/corsOptions')
 const { logger } = require('./middleware/logEvents');
-const errorHandler = require('./middleware/errorHandler')
+const errorHandler = require('./middleware/errorHandler');
+
     // const { callbackify } = require('util');
 const app = express();
 const PORT = process.env.PORT || 3500;
@@ -24,14 +25,19 @@ app.use(express.urlencoded({ extended: false }));
 // built-in middleware for json 
 app.use(express.json());
 
+
+
 // serve static files
 app.use('/', express.static(path.join(__dirname, '/public')));
 
 
 // using the routes
 app.use('/', require('./routes/root'));
-app.use('/auth', require('./routes/auth'));
+
 app.use('/register', require('./routes/register'));
+
+
+
 app.use('/employees', require('./routes/api/employees'));
 
 // app.use('/')
