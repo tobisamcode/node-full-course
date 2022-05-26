@@ -374,3 +374,11 @@
 20220526	14:17:47	d7a0aa5a-78a7-492e-8d8e-a54bcda5397c	GET	undefined	/register
 20220526	14:17:47	3d385e1a-e164-4a66-9359-b5b9d2d80bda	GET	undefined	/css/styles.css
 20220526	19:54:29	6c7cba79-5e84-425c-af41-a58641c2db93	POST	undefined	/register
+20220526	22:21:04	6cf2bb4b-9767-4646-a5e9-a4475c084d06	POST	undefined	/auth
+20220526	22:28:31	0bc64b93-2d82-4034-a308-2ff9c52ab976	POST	undefined	/auth
+20220526	22:28:37	7b88507d-38b7-4e44-9877-91d0da892cd2	POST	undefined	/auth
+20220526	22:28:40	750c9859-d4b8-44b4-bd3c-67fe46e73ed8	POST	undefined	/auth
+20220526	23:14:38	3eaf95b0-8569-4d17-ac7c-d84e169a588f	GET	undefined	/auth
+20220526	23:15:19	4b89efc5-66fe-4ae2-8a19-bb0d75efc8e6	POST	undefined	/auth
+20220526	23:15:23	27f1ab76-2619-436a-9b79-53dbc420b34f	POST	undefined	/auth
+20220526	23:15:33	4af48d13-7e52-40e2-9524-733eca221ca1	POST	undefined	/auth
