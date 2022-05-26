@@ -373,3 +373,4 @@
 20220526	14:16:26	4af4ed0a-338e-47b8-a091-1dc3b3900ecb	POST	undefined	/register
 20220526	14:17:47	d7a0aa5a-78a7-492e-8d8e-a54bcda5397c	GET	undefined	/register
 20220526	14:17:47	3d385e1a-e164-4a66-9359-b5b9d2d80bda	GET	undefined	/css/styles.css
+20220526	19:54:29	6c7cba79-5e84-425c-af41-a58641c2db93	POST	undefined	/register
