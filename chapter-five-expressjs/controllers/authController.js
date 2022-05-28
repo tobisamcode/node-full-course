@@ -4,14 +4,13 @@ const userDB = {
     this.users = data;
   }
 };
-
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcrypt');
 
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const fsPromises = require("fs").promises;
 const path = require("path");
-const { stringify } = require("querystring");
+
 
 const handleLogin = async (req, res) => {
   const { user, password } = req.body;
@@ -45,9 +44,10 @@ const handleLogin = async (req, res) => {
     userDB.setUsers([...otherUsers, currentUser]);
     await fsPromises.writeFile(
        path.join(__dirname, '..', 'model', 'users.json'),
-       JSON.stringify(userDB.users);
-    )
-    res.json({ success: `user ${user} is logged in!` });
+       JSON.stringify(userDB.users)
+    );
+    res.cookie('jwt', refreshToken, { httpOnly: true, maxAge: 24 * 60 *60 * 1000 })
+    res.json({ accessToken });
   } else {
     res.sendStatus(401); // unauthorized
   }
