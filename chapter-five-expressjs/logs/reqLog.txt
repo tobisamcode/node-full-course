@@ -485,3 +485,6 @@
 20220528	14:16:30	b90433d6-6336-401d-b2a2-e7e738bca797	GET	undefined	/refresh
 20220528	14:16:35	f52a2393-f953-4d3c-9314-b9b0676eb05e	GET	undefined	/refresh
 20220528	14:16:42	dae14ed2-53bf-40f5-97b7-d2b01a4ba414	GET	undefined	/refresh
+20220528	15:17:48	7ec2b02b-6032-473b-b4f0-df31ef0286dd	GET	undefined	/refresh
+20220528	15:17:55	a48d605e-093f-41ae-bc36-3ebbe7e47e68	POST	undefined	/auth
+20220528	15:18:01	2a13adf7-405a-4be1-a23a-af54ce6d8702	GET	undefined	/refresh
