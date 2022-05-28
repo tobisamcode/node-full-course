@@ -18,7 +18,7 @@ const userDB = {
       const cookies = req.cookies
       if (!cookies)
         return res
-          .status(401);
+          .sendStatus(204); // no content
 
       const refreshToken = cookies.jwt;
       const foundUser = userDB.users.find(person => person.refreshToken === refreshToken);
@@ -44,4 +44,3 @@ const userDB = {
     };
     
     module.exports = { handleRefreshToken }
-    
