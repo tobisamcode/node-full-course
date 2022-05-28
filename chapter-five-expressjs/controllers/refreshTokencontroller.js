@@ -5,9 +5,11 @@ const userDB = {
       }
     };
     
+    
     const jwt = require("jsonwebtoken");
     require("dotenv").config();
     
+
     const handleRefreshToken = (req, res) => {
       const cookies = req.cookies
       console.log(cookies);
@@ -20,7 +22,7 @@ const userDB = {
       const foundUser = userDB.users.find(person => person.refreshToken === refreshToken);
     
       if (!foundUser) return res.sendStatus(403); // Forbidden
-    
+      
       // evaluate JWT
       jwt.verify(
             refreshToken,
@@ -32,7 +34,7 @@ const userDB = {
                         process.env.ACCESS_TOKEN_SECRET,
                         { expiresIn: '30s' }
                   );
-                  res.json({ accessToken }) 
+                  res.json({ accessToken });
             }
       );
         // create JWTs
@@ -40,4 +42,3 @@ const userDB = {
     };
     
     module.exports = { handleRefreshToken }
-    
