@@ -13,6 +13,7 @@ const userDB = {
     
     const handleLogout = (req, res) => {
       // On client, also delete the accessToken
+      
 
 
       const cookies = req.cookies
