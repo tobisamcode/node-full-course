@@ -10,7 +10,7 @@ const userDB = {
     
     const handleRefreshToken = (req, res) => {
       const cookies = req.cookies
-      if (!cookies?.jwt)
+      if (!cookies)
         return res
           .status(401);
       console.log(cookies.jwt);
@@ -20,35 +20,23 @@ const userDB = {
     
       if (!foundUser) return res.sendStatus(403); // Forbidden
     
-      // evaluate password
-      const match = await bcrypt.compare(password, foundUser.password);
-      if (match) {
+      // evaluate JWT
+      jwt.verify(
+            refreshToken,
+            process.env.REFRESH_TOKEN_SECRET,
+            (err, decoded) => {
+                  if (err || foundUser.username !== decoded.username) return res.sendStatus(403);
+                  const accessToken = jwt.sign(
+                        { "username": decoded.username },
+                        process.env.ACCESS_TOKEN_SECRET,
+                        { expiresIn: '30s' }
+                  );
+                  res.json({ accessToken }) 
+            }
+      );
         // create JWTs
-        const accessToken = jwt.sign(
-          { username: foundUser.username },
-          process.env.ACCESS_TOKEN_SECRET,
-          { expiresIn: "30s" }
-        );
-        const refreshToken = jwt.sign(
-          { username: foundUser.username },
-          process.env.REFRESH_TOKEN_SECRET,
-          { expiresIn: "1d" }
-        );
-    
-        // saving refresh token with the current user
-        const otherUsers = userDB.users.filter(person => person.username !== foundUser.username);
-        const currentUser = { ...foundUser, refreshToken };
-        userDB.setUsers([...otherUsers, currentUser]);
-        await fsPromises.writeFile(
-           path.join(__dirname, '..', 'model', 'users.json'),
-           JSON.stringify(userDB.users)
-        );
-        res.cookie('jwt', refreshToken, { httpOnly: true, maxAge: 24 * 60 *60 * 1000 })
-        res.json({ accessToken });
-      } else {
-        res.sendStatus(401); // unauthorized
-      }
+       
     };
     
-    module.exports = { handleLogin };
+    module.exports = { handleRefreshToken }
     
