@@ -28,17 +28,18 @@ const handleLogout = async (req, res) => {
   }
 
   // Delete refreshToken in db
-  const otherUsers = userDB.users.filter(
+  const otherUsers = userDB.users.filter( person =>
     person.refreshToken !== foundUser.refreshToken
   );
   const currentUser = { ...foundUser, refreshToken };
   userDB.setUsers([...otherUsers, currentUser]);
 
   await fsPromises.writeFile(
-    path.join(__dirname, '..', 'model', 'users.json'), JSON.stringify(userDB.users)
+    path.join(__dirname, "..", "model", "users.json"),
+    JSON.stringify(userDB.users)
   );
 
-  res.clearCookie('jwt', {httpOnly: true});
+  res.clearCookie("jwt", { httpOnly: true });
   res.sendStatus(204); // no content
 };
 
