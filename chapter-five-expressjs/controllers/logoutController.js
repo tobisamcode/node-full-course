@@ -11,7 +11,7 @@ require("dotenv").config();
 const fsPromises = require("fs").promises;
 const path = require("path");
 
-const handleLogout = (req, res) => {
+const handleLogout = async (req, res) => {
   // On client, also delete the accessToken
 
   const cookies = req.cookies;
@@ -24,7 +24,7 @@ const handleLogout = (req, res) => {
   );
   if (!foundUser) {
     res.clearCookie("jwt", { httpOnly: true });
-    return res.sendStatus(403); // no content
+    return res.sendStatus(204); // no content
   }
 
   // Delete refreshToken in db
