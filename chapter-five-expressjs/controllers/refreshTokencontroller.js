@@ -4,8 +4,7 @@ const userDB = {
         this.users = data;
       }
     };
-    
-    
+        
     const jwt = require("jsonwebtoken");
     require("dotenv").config();
     
@@ -13,9 +12,9 @@ const userDB = {
     const handleRefreshToken = (req, res) => {
       const cookies = req.cookies
       console.log(cookies);
-      if (!cookies)
+      if (!cookies.jwt)
         return res
-          .status(401);
+          .sendStatus(401);
       console.log(cookies.jwt);
 
       const refreshToken = cookies.jwt;
