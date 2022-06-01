@@ -23,13 +23,17 @@ const handleLogout = async (req, res) => {
     person => person.refreshToken === refreshToken
   );
   if (!foundUser) {
-    res.clearCookie("jwt", { httpOnly: true });
+    res.clearCookie("jwt", {
+      httpOnly: true,
+      sameSite: "none",
+      secure: "true"
+    });
     return res.sendStatus(204); // no content
   }
 
   // Delete refreshToken in db
-  const otherUsers = userDB.users.filter( person =>
-    person.refreshToken !== foundUser.refreshToken
+  const otherUsers = userDB.users.filter(
+    person => person.refreshToken !== foundUser.refreshToken
   );
   const currentUser = { ...foundUser, refreshToken };
   userDB.setUsers([...otherUsers, currentUser]);
