@@ -13,7 +13,7 @@ const handlerNewUser = async (req, res) => {
   if (!user || !password)
     return res
       .status(404)
-      .json({ 'message': "username and password are required." });
+      .json({ message: "username and password are required." });
   // check for duplicate username in the db
   const duplicate = userDB.users.find(person => person.username === user);
   if (duplicate) return res.sendStatus(409); // conflict
@@ -21,7 +21,11 @@ const handlerNewUser = async (req, res) => {
     // encrypt the password
     const hashedPassword = await bcrypt.hash(password, 10);
     // store the new user
-    const newUser = { username: user, password: hashedPassword };
+    const newUser = {
+      username: user,
+      roles: { user: 2001 },
+      password: hashedPassword
+    };
     userDB.setUsers([...userDB.users, newUser]);
     await fsPromises.writeFile(
       path.join(__dirname, "..", "model", "users.json"),
