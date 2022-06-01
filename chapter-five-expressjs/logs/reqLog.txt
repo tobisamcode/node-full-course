@@ -510,3 +510,4 @@
 20220601	00:55:09	8cae5839-3253-425c-93a6-eed6e63b2c7e	POST	undefined	/auth
 20220601	00:55:15	231db6b4-6904-4ea2-aa3c-c3fa77d5600e	GET	undefined	/logout
 20220601	00:55:23	2206e389-11dc-4236-bc3e-34e1f6efd396	GET	undefined	/refresh
+20220601	17:17:58	1a326f84-a6c4-434f-bdde-d72b37b3ecaa	POST	undefined	/auth
