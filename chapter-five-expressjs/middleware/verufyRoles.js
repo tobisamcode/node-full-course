@@ -7,5 +7,9 @@ const verifyRoles = (...allowedRoles) => {
         const result = req.roles
             .map(role => rolesArray.includes(role))
             .find(val => vall === true);
+        if (!result) return res.sendStatus(401);
+        next();
     };
 };
+
+module.exports = verifyRoles;
